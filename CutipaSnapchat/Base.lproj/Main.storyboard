@@ -67,6 +67,23 @@
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCE-hW-iUt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qda-y4-2Yv">
+                                <rect key="frame" x="107" y="525" width="200" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="yYJ-mj-nYg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.12336903994845361" green="0.12336903994845361" blue="0.12336903994845361" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="google.png" title="  Iniciar con google">
+                                    <backgroundConfiguration key="background" cornerRadius="5">
+                                        <color key="strokeColor" red="0.17541881443298968" green="0.17541881443298968" blue="0.17541881443298968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzC-St-Zs2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,6 +92,7 @@
                             <constraint firstItem="YLI-0d-FwZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H2d-cg-UbX"/>
                             <constraint firstItem="YLI-0d-FwZ" firstAttribute="top" secondItem="HvI-mb-mxM" secondAttribute="bottom" constant="30" id="HCg-eG-jnT"/>
                             <constraint firstItem="HvI-mb-mxM" firstAttribute="top" secondItem="Cpr-kb-e6g" secondAttribute="bottom" constant="25" id="N9W-h1-gVU"/>
+                            <constraint firstItem="qda-y4-2Yv" firstAttribute="top" secondItem="YLI-0d-FwZ" secondAttribute="bottom" constant="30" id="NmD-GI-yGP"/>
                             <constraint firstItem="Cpr-kb-e6g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBN-kM-4fp"/>
                             <constraint firstItem="7qF-gM-u7I" firstAttribute="top" secondItem="QDP-nL-J0z" secondAttribute="bottom" constant="25" id="Wel-ys-jId"/>
                             <constraint firstItem="QDP-nL-J0z" firstAttribute="top" secondItem="MMd-aw-VRr" secondAttribute="bottom" constant="25" id="XPT-Dt-Wb1"/>
@@ -82,6 +100,7 @@
                             <constraint firstItem="QDP-nL-J0z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zua-ux-8qM"/>
                             <constraint firstItem="HvI-mb-mxM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jd6-sj-2OC"/>
                             <constraint firstItem="MMd-aw-VRr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="luC-W7-II9"/>
+                            <constraint firstItem="qda-y4-2Yv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nxV-r4-qkU"/>
                             <constraint firstItem="7qF-gM-u7I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x6u-nn-6mM"/>
                         </constraints>
                     </view>
@@ -96,7 +115,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mic.png" width="48" height="48"/>
+        <image name="google.png" width="18" height="18"/>
+        <image name="mic.png" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
