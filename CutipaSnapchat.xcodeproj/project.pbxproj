@@ -43,6 +43,11 @@
 		3CB9021D2BFBE68A00CC499B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB9021C2BFBE68A00CC499B /* GoogleSignIn */; };
 		3CB9021F2BFBE68A00CC499B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB9021E2BFBE68A00CC499B /* GoogleSignInSwift */; };
 		3CB902212BFBE76700CC499B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB902202BFBE76700CC499B /* GoogleService-Info.plist */; };
+		AB5C01E32C07A02C001B5741 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C01E22C07A02C001B5741 /* SnapsViewController.swift */; };
+		AB5C01E52C07A62F001B5741 /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C01E42C07A62F001B5741 /* ImagenViewController.swift */; };
+		AB5C01E72C07C11F001B5741 /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C01E62C07C11F001B5741 /* ElegirUsuarioViewController.swift */; };
+		AB5C01EB2C07CF09001B5741 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C01EA2C07CF09001B5741 /* Usuario.swift */; };
+		AB5C01ED2C07E551001B5741 /* registrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C01EC2C07E551001B5741 /* registrarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +60,12 @@
 		3CB901DA2BFBCC0200CC499B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CB901DC2BFBCC0200CC499B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB902202BFBE76700CC499B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB5C01DF2C079E3F001B5741 /* CutipaSnapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CutipaSnapchat.entitlements; sourceTree = "<group>"; };
+		AB5C01E22C07A02C001B5741 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		AB5C01E42C07A62F001B5741 /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
+		AB5C01E62C07C11F001B5741 /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
+		AB5C01EA2C07CF09001B5741 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		AB5C01EC2C07E551001B5741 /* registrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +127,11 @@
 		3CB901CD2BFBCC0100CC499B /* CutipaSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				AB5C01E92C07CEE3001B5741 /* Modelos */,
+				AB5C01E82C07CEAC001B5741 /* ViewControllers */,
+				AB5C01DF2C079E3F001B5741 /* CutipaSnapchat.entitlements */,
 				3CB901CE2BFBCC0100CC499B /* AppDelegate.swift */,
 				3CB901D02BFBCC0100CC499B /* SceneDelegate.swift */,
-				3CB901D22BFBCC0100CC499B /* iniciarSesionViewController.swift */,
 				3CB901D42BFBCC0100CC499B /* Main.storyboard */,
 				3CB902202BFBE76700CC499B /* GoogleService-Info.plist */,
 				3CB901D72BFBCC0200CC499B /* Assets.xcassets */,
@@ -126,6 +139,26 @@
 				3CB901DC2BFBCC0200CC499B /* Info.plist */,
 			);
 			path = CutipaSnapchat;
+			sourceTree = "<group>";
+		};
+		AB5C01E82C07CEAC001B5741 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CB901D22BFBCC0100CC499B /* iniciarSesionViewController.swift */,
+				AB5C01E62C07C11F001B5741 /* ElegirUsuarioViewController.swift */,
+				AB5C01E42C07A62F001B5741 /* ImagenViewController.swift */,
+				AB5C01E22C07A02C001B5741 /* SnapsViewController.swift */,
+				AB5C01EC2C07E551001B5741 /* registrarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AB5C01E92C07CEE3001B5741 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				AB5C01EA2C07CF09001B5741 /* Usuario.swift */,
+			);
+			path = Modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5C01E32C07A02C001B5741 /* SnapsViewController.swift in Sources */,
+				AB5C01E52C07A62F001B5741 /* ImagenViewController.swift in Sources */,
+				AB5C01ED2C07E551001B5741 /* registrarViewController.swift in Sources */,
+				AB5C01EB2C07CF09001B5741 /* Usuario.swift in Sources */,
 				3CB901D32BFBCC0100CC499B /* iniciarSesionViewController.swift in Sources */,
 				3CB901CF2BFBCC0100CC499B /* AppDelegate.swift in Sources */,
 				3CB901D12BFBCC0100CC499B /* SceneDelegate.swift in Sources */,
+				AB5C01E72C07C11F001B5741 /* ElegirUsuarioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CutipaSnapchat/CutipaSnapchat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CutipaSnapchat/CutipaSnapchat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

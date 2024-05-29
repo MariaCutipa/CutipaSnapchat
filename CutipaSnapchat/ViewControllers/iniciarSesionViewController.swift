@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import GoogleSignIn
+import FirebaseDatabase
 
 class iniciarSesionViewController: UIViewController {
 
@@ -43,18 +44,35 @@ class iniciarSesionViewController: UIViewController {
         }
     }
     @IBAction func iniciarSesionTapped(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!){(user,error) in print("Intentando Iniciar Sesion")
-            if error != nil{
-                print("Se presento el siguiente error: \(error)")
-            }else{
-                print("Inicio de sesion exitoso")
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] (user, error) in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.mostrarAlertaUsuarioNoCreado()
+                
+                return
             }
+            
+            print("Inicio de sesión exitoso")
+            self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func mostrarAlertaUsuarioNoCreado() {
+       let alerta = UIAlertController(title: "Usuario no registrado", message: "El usuario no está registrado. ¿Deseas crear una cuenta?", preferredStyle: .alert)
+       let crearCuentaAction = UIAlertAction(title: "Crear", style: .default) { _ in
+           self.performSegue(withIdentifier: "registrarseSegue", sender: nil)
+       }
+       let cancelarAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+       alerta.addAction(crearCuentaAction)
+       alerta.addAction(cancelarAction)
+       present(alerta, animated: true, completion: nil)
+   }
     
     
 
